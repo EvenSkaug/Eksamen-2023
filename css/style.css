@@ -1,10 +1,14 @@
 /*Gull-gul kode: #e6bd43
-
 Gråsvart: #252525
-
 Svart: #000
+Hvit: #fff
 
-Hvit: #fff*/
+Siden skal ha en maks bredde på 1600px
+På portfolio siden skal det brukes flexbox for å skape innholds-flyt i de ulike seksjonene. Artikkelkortene skal vokse og minske basert på den tilgjengelige plassen (hint: flex-grow), men de skal ikke blir større enn 692px.
+Design skal inneholde tre artikkelkort
+Branding skal inneholde 4 artikkelkort
+Development skal holde på 2 artikkelkort
+*/
 
 *{
     font-family: Arial, Helvetica, sans-serif;
@@ -14,9 +18,22 @@ Hvit: #fff*/
     padding: 0;
 }
 
+body{
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+#forside-grid{
+    display: grid;
+    grid-template-areas: "header"
+                         "main-forside"
+                         "footer";
+
+}
+
 .boldfont{
     font-weight: bolder;
-    font-size: large;
+    font-size: 3vw;
 }
 
 i{
@@ -24,6 +41,7 @@ i{
 }
 
 header{
+    grid-area: header;
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -43,6 +61,10 @@ header nav a{
     color: #000000;
 }
 
+header img{
+    height: 8em;
+}
+
 .hover :hover{
     font-weight: 900;
     text-decoration: underline #e6bd43;
@@ -54,11 +76,14 @@ header nav a{
     font-weight: 1000;
 }
 
+#main-forside{
+    grid-area: main-forside;
+}
+
 #forside-services{
     text-align: center;
-    margin-top: 2em;
-    padding-block: 2em;
-    padding-inline: 2em;
+    margin: 2em;
+    padding: 2em;
     background-image: inherit;
 }
 
@@ -85,6 +110,8 @@ header nav a{
 }
 
 #forside-about{
+    display: flex;
+    flex-direction: column;
     background-color: #e6bd43;
     padding-inline: 30%;
     padding-block: 3em;
@@ -101,15 +128,20 @@ header nav a{
     border: 3px solid;
     padding: 1em;
     margin-block: 1em;
+    margin-right: auto;
 }
 
 #services{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
     text-align: center;
     gap: 3em;
     padding-inline: 2em;
+}
+
+#services section{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+    gap: 2em;
 }
 
 #services article{
@@ -150,6 +182,7 @@ form{
 }
 
 footer{
+    grid-area: footer;
     background-color: #000000;
     display: flex;
     flex-direction: column;
@@ -178,4 +211,51 @@ footer p{
     background-color: #000000;
     padding: 0.5em;
     margin: 0;
+}
+
+
+@media screen and (min-width: 1000px) {
+    
+    #forside-grid{
+        grid-template-areas: "header header header"
+                             "main-forside main-forside main-forside"
+                             "footer footer footer";
+    }
+
+    #main-forside{
+        font-size: 2vw;
+    }
+
+    header{
+        flex-direction: row;
+        justify-content: space-between;
+        margin-inline: 3em;
+    }
+
+    header nav{
+        flex-direction: row;
+    }
+
+    #forside-about{
+        flex-direction: row;
+        padding: 2em;
+        gap: 2em;
+    }
+
+    #forside-about section{
+        display: flex;
+        flex-direction: column;   
+    }
+
+    #services section{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    footer{
+        flex-direction: row;
+        justify-content: space-between;
+        padding-inline: 2em;
+    }
+
 }
