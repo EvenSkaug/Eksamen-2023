@@ -6,6 +6,7 @@ Hvit: #fff
 /*css for hele nettstedet*/
 
 *{
+    font-family: Arial, Helvetica, sans-serif;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
     text-decoration: none;
@@ -246,11 +247,6 @@ footer p{
     .hoverbutton :hover{
         color: #e6bd43;
         background-color: #252525;
-    }
-
-    #contact-button :hover{
-        background-color: #252525;
-        color: #e6bd43;
     }
 
     #forside-about{
@@ -517,6 +513,10 @@ footer p{
 
 #contact-us i{
     font-size: 2em;
+}
+
+#kart{
+    width: 100%;
 }
 
 /*media queries for desktop about side*/
