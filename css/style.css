@@ -3,17 +3,10 @@ Gråsvart: #252525
 Svart: #000
 Hvit: #fff
 
-Siden skal ha en maks bredde på 1600px
-På portfolio siden skal det brukes flexbox for å skape innholds-flyt i de ulike seksjonene. Artikkelkortene skal vokse og minske basert på den tilgjengelige plassen (hint: flex-grow), men de skal ikke blir større enn 692px.
-Design skal inneholde tre artikkelkort
-Branding skal inneholde 4 artikkelkort
-Development skal holde på 2 artikkelkort
-*/
-
 /*css for hele nettstedet*/
 
 *{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: bold;
     text-decoration: none;
     margin: 0;
@@ -36,7 +29,7 @@ body{
 }
 
 .boldfont{
-    font-weight: bolder;
+    font-weight: 1000;
     font-siz: vw;
 }
 
@@ -402,6 +395,10 @@ footer p{
     }
 
     #products-menu nav{
+        justify-content: left;
+    }
+
+    #design section, #branding section, #development section{
         justify-content: left;
     }
 
