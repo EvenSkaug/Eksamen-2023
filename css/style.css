@@ -31,7 +31,6 @@ body{
 
 .boldfont{
     font-weight: 1000;
-    font-siz: vw;
 }
 
 .underline{
@@ -262,8 +261,7 @@ footer p{
     }
 
     .hoverbutton :hover{
-        color: #e6bd43;
-        background-color: #252525;
+        
     }
 
     #img-case{
@@ -279,10 +277,6 @@ footer p{
         margin-top: 2em;
         overflow: hidden;
         height: 35%;
-    }
-
-    #video-case video{
-        overflow: hidden;
     }
 
     #forside-about{
