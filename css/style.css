@@ -113,6 +113,11 @@ header img{
     height: 35%;
 }
 
+#img-case img{
+    width: 100%;
+    opacity: 60%;
+}
+
 #subheading{
     text-align: center;
     padding-inline: 2em;
@@ -260,8 +265,11 @@ footer p{
         text-decoration: underline 4px #e6bd43;
     }
 
-    .hoverbutton :hover{
-        
+    /*Jeg brukte ChatGPT til å løse et problem der hover ikke ville funke, den anbefalte å bruke "!important" hvis ikke fargene ble overskrevet*/
+    .hoverbutton:hover{
+        background-color: #000000 !important;
+        color: #e6bd43 !important;
+        border: none !important;
     }
 
     #img-case{
@@ -297,7 +305,12 @@ footer p{
         justify-content: space-between;
         padding-inline: 2em;
     }
-
+    
+    #contact-button:hover{
+        background-color: #000000;
+        color: #e6bd43;
+        text-decoration: none;
+    }
 }
 
 /*css for products side*/
@@ -313,14 +326,34 @@ footer p{
     grid-area: main-products;
 }
 
+#products-img{
+    position: absolute;
+    width: 100%;
+    max-width: 1600px;
+    z-index: -1;
+    margin-top: 2em;
+    overflow: hidden;
+    height: 90%;
+    opacity: 50%;
+}
+
+#products-img img{
+    width: 100%;
+    max-width: 1600px;
+    z-index: -1;
+    margin-top: 2em;
+    overflow: hidden;
+    height: 40%;
+}
+
 #products-title{
     text-align: center;
-    background-image: inherit;
-    margin-block: 2em;
+    margin-bottom: 25em;
+    margin-top: 15em;
 }
 
 #products-title h1{
-    font-size: 8vw;
+    font-size: 7vw;
 }
 
 #products-menu, #branding, #design, #development{
@@ -410,6 +443,7 @@ footer p{
     font-weight: 900;
 }
 
+
 /*media queries for desktop products side*/
 
 @media screen and (min-width: 1000px) {
@@ -420,13 +454,15 @@ footer p{
                              "footer footer footer";
     }
 
-    #products-menu nav{
+    #products-menu nav, #design section, #branding section, #development section{
         justify-content: left;
     }
 
-    #design section, #branding section, #development section{
-        justify-content: left;
-    }
+    /*Her har chatGPT blitt brukt som verktøy for å finne ut hvordan man får bildene til å vokse sakte*/
+    #branding img:hover, #design img:hover, #development img:hover{
+    transform: scale(1.1);
+    transition: transform 1s ease;
+}
 
 }
 
@@ -443,13 +479,35 @@ footer p{
     grid-area: main-about;
 }
 
+#about-img{
+    position: absolute;
+    width: 100%;
+    max-width: 1600px;
+    z-index: -1;
+    margin-top: 2em;
+    overflow: hidden;
+    height: 100%;
+}
+
+#about-img img{
+    width: 100%;
+    max-width: 1600px;
+    z-index: -1;
+    margin-top: 2em;
+    overflow: hidden;
+    height: 40%;
+}
+
 #about-section{
-    margin-block: 4em;
+    margin-top: 10em;
+    margin-bottom: 15em;
 }
 
 #about-section article{
-    padding-inline: 30%;
-    background-color: #ffffff;
+    display: inline-block;
+    padding: 1em;
+    margin-inline: 10%;
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 #about-section h1{
@@ -554,9 +612,9 @@ footer p{
 @media screen and (min-width: 1000px) {
 
     #about-section article{
-        padding: 0;
-        padding-left: 50%;
-        padding-right: 10%;
+        padding: 1em;
+        margin-left: 50%;
+        margin-right: 10%;
     }
     
     #contact-us section{
@@ -565,4 +623,22 @@ footer p{
         margin-inline: 30%;
         gap: 2em;
     }
+
+}
+
+
+@media screen and (min-width: 415px) {
+
+    #about-img img{
+        height: 30%;
+    }
+    
+}
+
+@media screen and (min-width: 840px) {
+
+    #about-img img{
+        height: 34%;
+    }
+
 }
