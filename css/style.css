@@ -30,12 +30,13 @@ body{
 }
 
 .boldfont{
-    font-weight: 1000;
+    font-weight: 900;
+    
 }
 
 .underline{
     text-decoration: underline 4px #e6bd43;
-    font-weight: 1000;
+    font-weight: 600;
     font-size: larger;
     padding-bottom: 0.3em;
 }
@@ -81,7 +82,7 @@ header img{
 
 #forside-services{
     text-align: center;
-    margin-top: 7em;
+    margin-top: 5em;
     padding: 2em;
 }
 
@@ -98,6 +99,10 @@ header img{
     font-weight: bolder;
 }
 
+#forside-services h1{
+    font-size: xx-large;
+}
+
 #video-case{
     display: none;
 }
@@ -110,7 +115,7 @@ header img{
     z-index: -1;
     margin-top: 2em;
     overflow: hidden;
-    height: 35%;
+    height: 50%;
 }
 
 #img-case img{
@@ -261,13 +266,14 @@ footer p{
     }
 
     .hovermenu :hover{
+        font-size: larger;
         font-weight: 900;
         text-decoration: underline 4px #e6bd43;
     }
 
     /*Jeg brukte ChatGPT til å løse et problem der hover ikke ville funke, den anbefalte å bruke "!important" hvis ikke fargene ble overskrevet*/
     .hoverbutton:hover{
-        background-color: #000000 !important;
+        background-color: #252525 !important;
         color: #e6bd43 !important;
         border: none !important;
     }
@@ -285,6 +291,7 @@ footer p{
         margin-top: 2em;
         overflow: hidden;
         height: 35%;
+        opacity: 50%;
     }
 
     #forside-about{
@@ -335,6 +342,7 @@ footer p{
     overflow: hidden;
     height: 90%;
     opacity: 50%;
+    
 }
 
 #products-img img{
@@ -343,13 +351,14 @@ footer p{
     z-index: -1;
     margin-top: 2em;
     overflow: hidden;
-    height: 40%;
+    height: 50%;
 }
 
 #products-title{
     text-align: center;
     margin-bottom: 25em;
     margin-top: 15em;
+    margin-inline: auto;
 }
 
 #products-title h1{
@@ -495,7 +504,7 @@ footer p{
     z-index: -1;
     margin-top: 2em;
     overflow: hidden;
-    height: 40%;
+    height: 60%;
 }
 
 #about-section{
@@ -587,6 +596,7 @@ footer p{
 #contact-us h3{
     text-align: center;
     margin-bottom: 2em;
+    font-size: larger;
 }
 
 #contact-us article h3{
@@ -601,6 +611,16 @@ footer p{
 
 #contact-us i{
     font-size: 2em;
+}
+
+#contact-us nav{
+    display: flex;
+    gap: 1em;
+}
+
+#message{
+    height: 5em;
+    margin-bottom: 1em;
 }
 
 #kart{
@@ -630,7 +650,7 @@ footer p{
 @media screen and (min-width: 415px) {
 
     #about-img img{
-        height: 30%;
+        height: 50%;
     }
     
 }
@@ -638,7 +658,7 @@ footer p{
 @media screen and (min-width: 840px) {
 
     #about-img img{
-        height: 34%;
+        height: 40%;
     }
 
 }
